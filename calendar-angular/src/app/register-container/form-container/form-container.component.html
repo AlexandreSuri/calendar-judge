@@ -1,0 +1,66 @@
+<div class="__container__form">
+  <form [formGroup]="form">
+    <div class="row">
+
+        <!-- Name Event -->
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="__form__group">
+                <small>Nome do evento:</small>
+                <input type="text" id="titulo" name="titulo" formControlName="titulo" class="form-control" required>
+            </div>
+        </div>
+
+        <!-- Data Event -->
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="__form__group">
+                <small>Data:</small>
+                <input type="date" id="dia" name="dia" formControlName="dia" class="form-control">
+            </div>
+        </div>
+
+        <!-- Juiz Event -->
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="__form__group">
+                <small>Juiz:</small>
+                <select id="juiz" name="juiz" class="form-control" formControlName="juiz" required>
+                  <option value=""></option>
+                  <option [value]="option.value" *ngFor="let option of options">{{option.data}}</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Time -->
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="__form__group">
+              <small>Inicio:</small>
+              <input type="time" id="inicio" name="inicio" formControlName="inicio" class="form-control" required>
+          </div>
+      </div>
+
+      <!-- End -->
+      <div class="col-sm-6 col-md-6 col-lg-6">
+          <div class="__form__group">
+              <small>Fim:</small>
+              <input type="time" id="fim" name="fim" formControlName="fim" class="form-control">
+          </div>
+      </div>
+
+      <!-- Add -->
+      <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="__form__group">
+            <small>Descrição:</small>
+            <textarea class="form-control" id="descricao" name="descricao" formControlName="descricao"></textarea>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="col-sm-12 col-md-12 col-lg-12 __form__group">
+          <div class="__form__group __form__btn">
+              <button class="btn btn-success" (click)="onSubmit()">Salvar</button>
+              <button class="btn btn-danger" (click)="onCancel()">Cancelar</button>
+          </div>
+      </div>
+
+    </div>
+  </form>
+</div>

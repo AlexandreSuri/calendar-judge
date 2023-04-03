@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary shadow-sm">
+  <a class="navbar-brand text-white ml-5" (click)="onSearch()">
+    <span>
+      <img src="../../assets/calendar.png" alt="" width="20%"></span>
+      Agenda
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar" aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse ml-10" id="textoNavbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-white" (click)="onAdd()">Cadastro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" (click)="onSearch()">Agendamentos</a>
+      </li>
+    </ul>
+  </div>
+</nav>

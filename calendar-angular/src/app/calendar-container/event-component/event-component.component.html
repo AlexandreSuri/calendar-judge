@@ -1,0 +1,33 @@
+<div *ngIf="calendars$ | async as calendars;">
+<div class="__cointainer__event shadow" *ngFor="let calendar of calendars">
+  <div class="container">
+    <div class="row">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 ">
+          <span class="__span__header">{{calendar.titulo}}</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 ">
+          <span class="__span__header">{{calendar.juiz}}</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-2 ">
+          <span class="__span__header">{{calendar.dia | data}}</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-1 ">
+          <span class="__span__header">{{calendar.inicio}}</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-1 ">
+          <span class="__span__header">{{calendar.fim}}</span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-1 ">
+          <span><a (click)="onEdit(calendar)"><img src="../../assets/edit.png" alt="" width="50%"></a></span>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-1 ">
+          <span><a (click)="onRemove(calendar)"><img src="../../assets/remove.png" alt="" width="50%"></a></span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>

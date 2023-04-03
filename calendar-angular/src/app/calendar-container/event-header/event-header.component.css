@@ -1,0 +1,22 @@
+.__cointainer__header{
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    padding: 0.3em;
+    margin-bottom: 0;
+    border-radius: 0.3em;
+    color: #FFF;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+.pr_1{
+  padding-right: 3em;
+}
+
+.__span__header{
+  align-items: left;
+}
